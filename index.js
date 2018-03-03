@@ -21,7 +21,14 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', function (req, res) {
-    res.render('home');
+     
+    // res.render('home');
+    res.set('Content-Type','text/html');
+    var s='';
+    for(var name in req.headers){
+        s+=name+':'+req.headers[name]+'\n';
+    }
+    res.send(s);
 
 });
 app.get('/about', function (req, res) {
