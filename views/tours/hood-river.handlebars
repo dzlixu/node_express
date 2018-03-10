@@ -1,7 +1,7 @@
 <h1>Hood River Tour</h1>
 <a href="/tours/request-group-rate" class="requestGroupRate">Request Group Rate</a>
 <h1>Request Group</h1>
-<form>
+<form method="POST">
    <input type="hidden" name="referrer">
    Name: <input type="text" id="fieldName" name="name"><br>
    Group size: <input type="text" name="groupSize"><br>
@@ -14,6 +14,6 @@
 </form>
 <script >
     $(document).ready(function(){
-        $('input[name="referrer"]'.val(document.referrer));
+        $('input[name="referrer"]').val(document.referrer));
     })
 </script>
